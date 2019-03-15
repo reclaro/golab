@@ -6,7 +6,7 @@ import (
 	"github.com/google/go-github/github"
 )
 
-// Search executes a search inside a specified repositroy name
+// Search executes a search for a term inside a specified repositroy name
 func Search(searchTerm, repoName string) (*github.CodeSearchResult, error) {
 	searchString := fmt.Sprintf("%s in:file repo:%s", searchTerm, repoName)
 	client := github.NewClient(nil)
